@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Aller";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Aller/Aller_Std_lt.eot");
+  src: url("../fonts/Aller/Aller_Std_lt.eot?#iefix") format("embedded-opentype"), url("../fonts/Aller/Aller_Std_lt.woff") format("woff"), url("../fonts/Aller/Aller_Std_lt.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Aller";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/Aller/Aller_Std_Bd.eot");
+  src: url("../fonts/Aller/Aller_Std_Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/Aller/Aller_Std_Bd.woff") format("woff"), url("../fonts/Aller/Aller_Std_Bd.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "awesome";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/fontawesome/webfonts/fa-regular-400.eot");
+  src: url("../fonts/fontawesome/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/webfonts/fa-regular-400.woff") format("woff"), url("../fonts/fontawesome/webfonts/fa-regular-400.ttf") format("truetype"); }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: "aller", sans-serif;
+  overflow-x: hidden;
+  opacity: 1; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /**/ }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /**/ }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /**/ }
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /**/ }
+
+/*==========  Mobile First  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /**/ }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  /**/ }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /**/ }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/ }

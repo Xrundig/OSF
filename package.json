@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Xrundig/OSF/issues"
   },
-  "homepage": "https://github.com/Xrundig/OSF#readme"
+  "homepage": "https://github.com/Xrundig/OSF#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
 }
