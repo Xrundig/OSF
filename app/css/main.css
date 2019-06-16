@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "Aller";
+  font-family: "Lato";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/Aller/Aller_Std_lt.eot");
-  src: url("../fonts/Aller/Aller_Std_lt.eot?#iefix") format("embedded-opentype"), url("../fonts/Aller/Aller_Std_lt.woff") format("woff"), url("../fonts/Aller/Aller_Std_lt.ttf") format("truetype"); }
+  src: url("../fonts/Lato/Lato-Black.eot");
+  src: url("../fonts/Lato/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Black.woff") format("woff"), url("../fonts/Lato/Lato-Black.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Aller";
-  font-weight: bold;
+  font-family: "Lato-Bold";
+  font-weight: normal;
   font-style: normal;
-  src: url("../fonts/Aller/Aller_Std_Bd.eot");
-  src: url("../fonts/Aller/Aller_Std_Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/Aller/Aller_Std_Bd.woff") format("woff"), url("../fonts/Aller/Aller_Std_Bd.ttf") format("truetype"); }
+  src: url("../fonts/Lato/Lato-Bold.eot");
+  src: url("../fonts/Lato/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Bold.woff") format("woff"), url("../fonts/Lato/Lato-Bold.ttf") format("truetype"); }
 
 @font-face {
   font-family: "awesome";
@@ -27,14 +27,123 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.65;
-  font-family: "aller", sans-serif;
+  font-family: "Lato";
   overflow-x: hidden;
   opacity: 1; }
+
+header {
+  height: 100px;
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; }
+  header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header .navbar ul {
+      list-style-type: none;
+      /*display: inline-block*/ }
+      header .navbar ul li {
+        display: inline;
+        margin-left: 10px; }
+
+.logo {
+  background-color: yellow;
+  display: flex; }
+
+.logo-text h1 {
+  margin-bottom: 0;
+  padding: 0;
+  letter-spacing: 2; }
+
+.logo-text h4 {
+  margin-top: 0; }
 
 .img-responsive {
   display: block;
   max-width: 100%;
-  height: auto; }
+  height: 100%; }
+
+.control {
+  background-color: grey;
+  height: 500px; }
+
+.sales {
+  background-color: blue;
+  height: 300px; }
+
+.darkblue {
+  background-color: #262a32; }
+
+.popular {
+  display: flex;
+  color: white;
+  padding: 80px 0 20px 0; }
+  .popular h3 {
+    padding: 0px 50px;
+    white-space: nowrap; }
+  .popular hr {
+    background-color: #3c4047;
+    color: #3c4047;
+    width: 100%; }
+
+.item {
+  height: 300px;
+  background-color: white;
+  margin: 20px 0px; }
+
+.loadmore {
+  display: flex;
+  align-items: center; }
+
+.button {
+  color: white;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 25px;
+  box-sizing: border-box; }
+
+.banner {
+  width: 100%;
+  position: relative; }
+  .banner h2, .banner p {
+    color: white;
+    text-align: center; }
+
+.banner-text {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.banner-image {
+  width: 100%; }
+
+.product-text {
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px; }
+
+.product-item {
+  height: 300px;
+  background-color: white;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  text-align: center; }
+  .product-item h6 {
+    padding-top: 20px; }
+  .product-item p {
+    color: #a5ce5d; }
+
+.darkgrey {
+  background-color: #45413e; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */

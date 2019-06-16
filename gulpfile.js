@@ -8,5 +8,5 @@ gulp.task('sass', function(){
 })
 
 gulp.task('watch', function(){
-	gulp.watch('app/sass/**/*.sass',gulp.series('sass'));
+	gulp.watch('app/sass/**/*.sass', gulp.series('sass'));
 });
