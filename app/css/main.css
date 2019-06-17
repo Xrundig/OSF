@@ -13,11 +13,18 @@
   src: url("../fonts/Lato/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Bold.woff") format("woff"), url("../fonts/Lato/Lato-Bold.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "awesome";
+  font-family: "awesome-regular";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/fontawesome/webfonts/fa-regular-400.eot");
-  src: url("../fonts/fontawesome/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/webfonts/fa-regular-400.woff") format("woff"), url("../fonts/fontawesome/webfonts/fa-regular-400.ttf") format("truetype"); }
+  src: url("../fonts/fontawesome/fa-regular-400.eot");
+  src: url("../fonts/fontawesome/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-regular-400.woff") format("woff"), url("../fonts/fontawesome/fa-regular-400.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "awesome-brands";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/fontawesome/fa-brands-400.eot");
+  src: url("../fonts/fontawesome/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-brands-400.woff") format("woff"), url("../fonts/fontawesome/fa-brands-400.ttf") format("truetype"); }
 
 html, body {
   height: 100%; }
@@ -33,7 +40,6 @@ body {
 
 header {
   height: 100px;
-  background-color: pink;
   display: flex;
   justify-content: space-between;
   flex-direction: column; }
@@ -43,22 +49,24 @@ header {
     align-items: center; }
     header .navbar ul {
       list-style-type: none;
-      /*display: inline-block*/ }
+      margin-bottom: 0px; }
       header .navbar ul li {
+        color: #45413e;
         display: inline;
         margin-left: 10px; }
 
 .logo {
-  background-color: yellow;
   display: flex; }
 
-.logo-text h1 {
-  margin-bottom: 0;
-  padding: 0;
-  letter-spacing: 2; }
-
-.logo-text h4 {
-  margin-top: 0; }
+.logo-text {
+  margin-left: 10px; }
+  .logo-text h2 {
+    margin-bottom: 0;
+    padding: 0;
+    letter-spacing: 2; }
+  .logo-text h5 {
+    color: #84bc22;
+    margin-bottom: 0; }
 
 .img-responsive {
   display: block;
@@ -123,6 +131,9 @@ header {
 .banner-image {
   width: 100%; }
 
+.product {
+  padding-bottom: 50px; }
+
 .product-text {
   color: white;
   text-align: center;
@@ -144,6 +155,19 @@ header {
 
 .darkgrey {
   background-color: #45413e; }
+
+.kind {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+  .kind h5 {
+    color: white; }
+  .kind p {
+    color: #7d7a77; }
+
+.kind-descr {
+  width: 60%; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
