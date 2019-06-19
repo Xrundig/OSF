@@ -6,6 +6,13 @@
   src: url("../fonts/Lato/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Black.woff") format("woff"), url("../fonts/Lato/Lato-Black.ttf") format("truetype"); }
 
 @font-face {
+  font-family: "Lato-Regular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Lato/Lato-Regular.eot");
+  src: url("../fonts/Lato/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Regular.woff") format("woff"), url("../fonts/Lato/Lato-Regular.ttf") format("truetype"); }
+
+@font-face {
   font-family: "Lato-Bold";
   font-weight: normal;
   font-style: normal;
@@ -75,11 +82,60 @@ header {
 
 .control {
   background-color: grey;
+  background-image: url("../pictures/bags.png");
+  color: white;
+  padding-left: 50px;
+  padding-top: 70px;
   height: 500px; }
+  .control h1 {
+    width: 70%; }
+  .control p {
+    width: 45%;
+    padding-top: 70px;
+    font-family: Lato-Regular;
+    font-size: 12px; }
+
+.control-button {
+  margin-top: 50px;
+  font-family: Lato-Regular;
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.slick-dots {
+  bottom: 10%; }
+  .slick-dots li button:before {
+    color: #a1b3bb;
+    font-size: 8px; }
 
 .sales {
-  background-color: blue;
-  height: 300px; }
+  height: 500px;
+  text-align: center;
+  box-sizing: border-box; }
+  .sales h5, .sales p {
+    font-family: Lato-Regular; }
+  .sales h5 {
+    padding: 20px 20px 20px 0; }
+  .sales p {
+    padding: 20px 0 20px 0; }
+
+.summer-sales {
+  color: white;
+  height: 300px;
+  background-color: #84bc22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .summer-sales h2 {
+    font-size: 68px; }
+  .summer-sales h3 {
+    font-family: Lato-Regular;
+    text-align: center; }
 
 .darkblue {
   background-color: #262a32; }
