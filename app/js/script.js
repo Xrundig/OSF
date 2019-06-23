@@ -2,6 +2,9 @@
 	alert('hi');
 })*/
 
+/*Navbar hover effect*/
+
+
 
 
 
@@ -23,17 +26,59 @@ $(document).ready(function(){
 	/*var carousel = $(".owl-carousel");*/
 
 	// Запускаем плагин карусели
-	$('.second').slick({
-	    slidesToShow: 3, 
+	$('.product-carousel').slick({
+	    slidesToShow: 4, 
+	    prevArrow: "<div class='prevArrow'></div>",
+	    nextArrow: "<div class='nextArrow'></div>",
 	  });
+	$('.drop').hover(
+			function(){
+				$('.drop-service').removeClass(' unvisible');
+				$('.drop-navigation').removeClass(' unvisible');
+				$('.drop').css('color','white');
+			},
+			function(){
+				$('.drop-service').addClass(' unvisible');
+				$('.drop-navigation').addClass(' unvisible');
+				$('.drop').css('color','#45413e');
+			}
+		)
+	$('.drop-navigation').hover(
+			function(){
+				$('.drop-service').removeClass(' unvisible');
+				$('.drop-navigation').removeClass(' unvisible');
+				$('.drop').css('color','white');
+			},
+			function(){
+				$('.drop-service').addClass(' unvisible');
+				$('.drop-navigation').addClass(' unvisible');
+				$('.drop').css('color','#45413e');
+			}
+		)
+
 	
-	/*$(".owl-carousel").owlCarousel({
-		loop:true,
-    	margin:10,
-    	nav:true,
-    	navText: ["<div class='arrow-left'></div>, <div class='arrow-right'></div>"],
-    	items: 4
-	});*/
+	
+	/*
+	$('.drop').hover(
+		function(){
+			$('.drop-navigation').removeClass(' unvisible');
+		},
+		function(){
+			$('.drop-navigation').addClass(' unvisible');
+		}
+	)*/
+/*
+	$('.drop-navigation').hover(
+		function(){
+			$('.drop-navigation').removeClass(' unvisible');
+			$('.drop-service').css('display', 'block');
+		},
+		function(){
+			$('.drop-navigation').addClass(' unvisible');
+			$('.drop-service').css('display', 'none');
+		}
+	)
+	*/
 
 });
 
