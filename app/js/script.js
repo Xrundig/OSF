@@ -2,7 +2,7 @@
 	alert('hi');
 })*/
 
-/*Navbar hover effect*/
+
 
 
 
@@ -21,11 +21,13 @@ $(document).ready(function(){
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
   });
-	
-	// Находим блок карусели
-	/*var carousel = $(".owl-carousel");*/
 
-	// Запускаем плагин карусели
+
+
+
+	/*Navbar hover effect*/
+
+
 	$('.product-carousel').slick({
 	    slidesToShow: 4, 
 	    prevArrow: "<div class='prevArrow'></div>",
@@ -56,29 +58,30 @@ $(document).ready(function(){
 			}
 		)
 
-	
-	
-	/*
-	$('.drop').hover(
+	/*Hover effect on products*/
+	$('.item').hover(
 		function(){
-			$('.drop-navigation').removeClass(' unvisible');
+			var selected = document.createElement('div');
+			selected.className = 'item-selected';
+			this.appendChild(selected);
+			var selectedHeart = document.createElement('div');
+			selectedHeart.className = 'selected-heart';
+			selected.appendChild(selectedHeart);
+			var heart = document.createElement('div');
+			heart.className = 'heart';
+			selectedHeart.appendChild(heart);
+			var selectedPlus = document.createElement('div');
+			selectedPlus.className = 'selected-plus';
+			selected.appendChild(selectedPlus);
+			var plus = document.createElement('div');
+			plus.className = 'plus';
+			selectedPlus.appendChild(plus);
 		},
 		function(){
-			$('.drop-navigation').addClass(' unvisible');
-		}
-	)*/
-/*
-	$('.drop-navigation').hover(
-		function(){
-			$('.drop-navigation').removeClass(' unvisible');
-			$('.drop-service').css('display', 'block');
-		},
-		function(){
-			$('.drop-navigation').addClass(' unvisible');
-			$('.drop-service').css('display', 'none');
+			
+			$('.item-selected').remove();
 		}
 	)
-	*/
 
 });
 

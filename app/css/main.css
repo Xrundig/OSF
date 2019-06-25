@@ -1,38 +1,23 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Lato";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/Lato/Lato-Black.eot");
-  src: url("../fonts/Lato/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Black.woff") format("woff"), url("../fonts/Lato/Lato-Black.ttf") format("truetype"); }
+  font-family: Lato;
+  src: url("../webfonts/Lato/Lato-Black.ttf"); }
 
 @font-face {
-  font-family: "Lato-Regular";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/Lato/Lato-Regular.eot");
-  src: url("../fonts/Lato/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Regular.woff") format("woff"), url("../fonts/Lato/Lato-Regular.ttf") format("truetype"); }
+  font-family: Lato-Regular;
+  src: url("../webfonts/Lato/Lato-Regular.ttf"); }
 
 @font-face {
-  font-family: "Lato-Bold";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/Lato/Lato-Bold.eot");
-  src: url("../fonts/Lato/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Bold.woff") format("woff"), url("../fonts/Lato/Lato-Bold.ttf") format("truetype"); }
+  font-family: Lato-Bold;
+  src: url("../webfonts/Lato/Lato-Bold.ttf"); }
 
 @font-face {
-  font-family: "awesome-regular";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/fontawesome/fa-regular-400.eot");
-  src: url("../fonts/fontawesome/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-regular-400.woff") format("woff"), url("../fonts/fontawesome/fa-regular-400.ttf") format("truetype"); }
+  font-family: Fontawesome;
+  src: url("../webfonts/fa-brands-400.ttf"); }
 
 @font-face {
-  font-family: "awesome-brands";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/fontawesome/fa-brands-400.eot");
-  src: url("../fonts/fontawesome/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-brands-400.woff") format("woff"), url("../fonts/fontawesome/fa-brands-400.ttf") format("truetype"); }
+  font-family: Fontregular;
+  src: url("../webfonts/fa-regular-400.ttf"); }
 
 html, body {
   height: 100%; }
@@ -83,11 +68,16 @@ p {
   max-width: 100%;
   height: 100%; }
 
-/*nav
-	ul
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%; }
+  .icons .icons-svg {
+    max-width: 12%;
+    margin-left: 15px; }
 
-		li
-			color: #45413e*/
 .drop {
   height: 100%;
   position: relative;
@@ -134,6 +124,16 @@ p {
     .drop-navigation ul li:hover {
       opacity: 0.75; }
 
+.girl {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.img-girl {
+  max-width: 100%; }
+
 .control {
   background-color: grey;
   background-image: url("../pictures/bags.png");
@@ -155,10 +155,11 @@ p {
   width: 150px;
   height: 50px;
   border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  cursor: pointer; }
 
 .slick-dots {
   bottom: 10%; }
@@ -169,13 +170,14 @@ p {
 .sales {
   height: 500px;
   text-align: center;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: relative; }
   .sales h5, .sales p {
     font-family: Lato-Regular; }
   .sales h5 {
-    padding: 20px 20px 20px 0; }
+    padding: 20px 20px 0px 20px; }
   .sales p {
-    padding: 20px 0 20px 0; }
+    padding: 20px 0px; }
 
 .summer-sales {
   color: white;
@@ -190,6 +192,23 @@ p {
   .summer-sales h3 {
     font-family: Lato-Regular;
     text-align: center; }
+
+.button-sales {
+  width: 80%;
+  color: #3a5b96;
+  height: 50px;
+  border: 2px solid #3a5b96;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 50px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0px;
+  left: 10%;
+  cursor: pointer; }
+  .button-sales:hover {
+    background-color: #3a5b96;
+    color: white; }
 
 .darkblue {
   background-color: #262a32; }
@@ -212,7 +231,70 @@ p {
   margin: 20px 0px;
   font-family: Lato-Regular;
   text-align: center;
-  border-radius: 5px 5px 0 0; }
+  border-radius: 5px 5px 0 0;
+  position: relative; }
+
+.item-selected {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+  background: linear-gradient(rgba(66, 215, 170, 0.8), rgba(50, 199, 120, 0.8));
+  z-index: 5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .item-selected .selected-heart, .item-selected .selected-plus {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.heart {
+  background-color: red;
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  top: 5px;
+  transform: rotate(-45deg);
+  width: 30px; }
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px; }
+
+.heart:before {
+  top: -15px;
+  left: 0; }
+
+.heart:after {
+  left: 15px;
+  top: 0; }
+
+.plus {
+  background-color: #23c46e;
+  height: 50px;
+  width: 10px;
+  position: relative; }
+
+.plus:after {
+  content: "";
+  height: 10px;
+  width: 50px;
+  background-color: #23c46e;
+  position: absolute;
+  left: -20px;
+  top: 20px; }
 
 .item-text {
   height: 120px;
@@ -366,6 +448,12 @@ footer {
 
 address p {
   font-size: 14px; }
+
+.social {
+  color: #b2b2b2;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around; }
 
 .visible {
   display: block; }
