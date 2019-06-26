@@ -13,17 +13,32 @@
 	<link rel="stylesheet" href="app/css/all.min.css">
 </head>
 <body>
+	<div class="sign unvisible">
+		<div class="sign-window">
+			<h2>Sign in</h2>
+			<form action="POST" class="sign-form">
+				<label>Email<input type="text" class="sign-mail"></label>
+				<label>Password <a href="#">forgot password</a><input type="text" class="sign-password"></label>
+				<button class="sign-button">LOGIN</button>
+				<a href="#"><p>I don't have an account</p></a>
+			</form>				
+		</div>
+	</div>
 	<header>
+
 			<div class="container ">
 				<div class="row">
 					<div class="col-lg-9 navbar">
-						<div class="logo">
-							<img src="app/pictures/logo.png" alt="OSF_Academy" class="img-responsive">
-							<div class="logo-text">
-								<h2>OSF</h2>
-								<h5>Academy</h5>
+						
+						<a href="index.html">
+							<div class="logo">
+								<img src="app/pictures/logo.png" alt="OSF_Academy" class="img-responsive">
+								<div class="logo-text">
+									<h2>OSF</h2>
+									<h5>Academy</h5>
+								</div>
 							</div>
-						</div>
+						</a>
 						<nav>
 							<ul>
 								
@@ -36,17 +51,39 @@
 								<li>COMPANY</li>
 								<li>LIBRARY</li>
 								<li>CONTACT US</li>
-								<li>EN</li>
-								<li>US</li>
+								<li class="selector">EN
+									<div class="selector-service">
+										<ul>
+											<li>UKR</li>
+											<li>RO</li>
+											<li>IT</li>
+											<li>RUS</li>
+										</ul>
+									</div>
+								</li>
+								<li class="selector">US
+									<div class="selector-service">
+										
+									</div>
+								</li>
 							</ul>
 						</nav>
 					</div>
 					<div class="col-lg-3">
 						<div class="icons">
-							<img src="app/pictures/search.svg" alt="search, flavicon.com" class="icons-svg">
-							<img src="app/pictures/user.svg" alt="user, flavicon.com" class="icons-svg">
-							<img src="app/pictures/like.svg" alt="like, flavicon.com" class="icons-svg">
-							<img src="app/pictures/bag.svg" alt="bag, flavicon.com" class="icons-svg">
+							<div class="icons-wrapper">
+								<img src="app/pictures/search.svg" alt="search, flavicon.com" class="icons-svg">
+							</div>
+							<div class="icons-wrapper" id="user">
+								<img src="app/pictures/user.svg" alt="search, flavicon.com" class="icons-svg">
+							</div>
+							<div class="icons-wrapper" id="like">
+								<img src="app/pictures/like.svg" alt="search, flavicon.com" class="icons-svg">
+							</div>
+							<div class="icons-wrapper" id="plus">
+								<img src="app/pictures/bag.svg" alt="search, flavicon.com" class="icons-svg">
+							</div>
+							
 						</div>
 					</div>
 				</div>

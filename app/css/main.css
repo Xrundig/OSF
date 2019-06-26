@@ -44,11 +44,71 @@ header {
       margin-bottom: 0px; }
       header .navbar ul li {
         color: #45413e;
-        display: inline;
+        display: inline-block;
         margin-left: 10px; }
 
 p {
   font-family: Lato-Regular; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+  a a:hover {
+    text-decoration: overline; }
+
+.sign {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100; }
+  .sign .sign-window {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    position: fixed;
+    background-color: white;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+    padding: 30px 30px; }
+    .sign .sign-window h2 {
+      margin-bottom: 40px; }
+
+.sign-form label {
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 20px;
+  position: relative;
+  font-family: Lato-Bold; }
+  .sign-form label a {
+    color: #84bc22;
+    position: absolute;
+    right: 0px; }
+  .sign-form label .sign-mail, .sign-form label .sign-password {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    outline: none;
+    padding: 0 20px;
+    margin-top: 5px; }
+
+.sign-form .sign-button {
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  outline: none;
+  font-family: Lato-Regular;
+  color: white;
+  background-color: #84bc22;
+  border: none;
+  margin: 20px 0px; }
+
+.sign-form p {
+  color: #84bc22; }
 
 .logo {
   display: flex; }
@@ -74,9 +134,30 @@ p {
   justify-content: flex-end;
   width: 100%;
   height: 100%; }
-  .icons .icons-svg {
-    max-width: 12%;
-    margin-left: 15px; }
+  .icons .icons-wrapper {
+    width: 30px;
+    margin-left: 10px;
+    position: relative;
+    cursor: pointer; }
+    .icons .icons-wrapper .icons-svg {
+      max-width: 90%; }
+
+.icons-wrapper:hover {
+  opacity: 0.75; }
+
+.counter, .calculator {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid green;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  line-height: 13px;
+  color: green;
+  font-size: 10px; }
 
 .drop {
   height: 100%;
@@ -88,7 +169,8 @@ p {
 .drop-service {
   position: absolute;
   top: -50px;
-  height: 100px;
+  left: -10px;
+  height: 105px;
   width: 115%;
   background-color: #262a32;
   z-index: -1; }
@@ -97,6 +179,37 @@ p {
   content: "▼";
   color: #d1d5d8;
   padding-left: 10px; }
+
+.selector {
+  height: 100%;
+  position: relative;
+  z-index: 2; }
+  .selector:hover {
+    color: white; }
+  .selector:hover .selector-service {
+    display: block; }
+  .selector .selector-service {
+    position: absolute;
+    top: -50px;
+    height: 300px;
+    width: 45px;
+    background-color: #262a32;
+    z-index: -1;
+    display: none; }
+    .selector .selector-service ul {
+      display: block;
+      list-style-type: none;
+      z-index: 5;
+      width: 100%; }
+      .selector .selector-service ul li {
+        display: block;
+        color: green;
+        margin-left: 0px; }
+
+.selector:after {
+  content: "▼";
+  color: #d1d5d8;
+  padding-left: 5px; }
 
 .relat {
   position: relative; }
@@ -227,7 +340,7 @@ p {
 
 .item {
   box-sizing: border-box;
-  /*height: 300px*/
+  /*height: 300px */
   margin: 20px 0px;
   font-family: Lato-Regular;
   text-align: center;
@@ -456,10 +569,14 @@ address p {
   justify-content: space-around; }
 
 .visible {
-  display: block; }
+  display: block;
+  visibility: visible;
+  opacity: 1; }
 
 .unvisible {
-  display: none; }
+  display: none;
+  visibility: hidden;
+  opacity: 0; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */

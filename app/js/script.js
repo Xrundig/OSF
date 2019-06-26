@@ -83,5 +83,48 @@ $(document).ready(function(){
 		}
 	)
 
+
+
+	/*Calculating clicks on hearts and pluses on products*/
+
+	var counterHearts = 0;
+	var counterPlus = 0;
+	$('.item').click(function(){
+		if(event.target.className == "selected-heart" || event.target.className == "heart"){
+			if(counterHearts==0){
+				var counter = document.createElement('div');
+				counter.className = 'counter';
+				$('#like').append(counter);
+			}
+			counterHearts++;
+			$('.counter').html(counterHearts);
+		}
+		if(event.target.className == "selected-plus" || event.target.className == "plus"){
+			if(counterPlus==0){
+				var calculator = document.createElement('div');
+				calculator.className = 'calculator';
+				$('#plus').append(calculator);
+			}
+			counterPlus++;
+			$('.calculator').html(counterPlus);
+		}
+		
+	})
+
+	/*Sign in window*/
+	$('#user').click(function(){
+		$('.sign').removeClass('unvisible');
+	})
+	$('.sign').click(function(){
+		if(event.target.className == "sign"){
+			$('.sign').addClass('unvisible');
+		}
+	})
+	$(document).keydown(function(e) {
+    if (e.keyCode == 27 & !$('.sign').hasClass('unvisible')) {
+        $('.sign').addClass('unvisible');
+    }
+});
+
 });
 
