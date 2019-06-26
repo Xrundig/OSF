@@ -59,11 +59,15 @@ $(document).ready(function(){
 		)
 
 	/*Hover effect on products*/
-	$('.item').hover(
+	$('.item-image').hover(
+		
+
+
 		function(){
+			console.log(this.parentNode);
 			var selected = document.createElement('div');
 			selected.className = 'item-selected';
-			this.appendChild(selected);
+			this.parentNode.append(selected);
 			var selectedHeart = document.createElement('div');
 			selectedHeart.className = 'selected-heart';
 			selected.appendChild(selectedHeart);
@@ -76,12 +80,16 @@ $(document).ready(function(){
 			var plus = document.createElement('div');
 			plus.className = 'plus';
 			selectedPlus.appendChild(plus);
+		
 		},
 		function(){
 			
 			$('.item-selected').remove();
 		}
+
 	)
+
+});
 
 
 
@@ -126,5 +134,5 @@ $(document).ready(function(){
     }
 });
 
-});
+
 
