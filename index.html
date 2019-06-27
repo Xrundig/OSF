@@ -16,8 +16,8 @@
 	<div class="sign unvisible">
 		<div class="sign-window">
 			<h2>Sign in</h2>
-			<form action="POST" class="sign-form">
-				<label>Email<input type="text" class="sign-mail"></label>
+			<form action="POST" class="sign-form" id="signForm">
+				<label>Email<input type="text" class="sign-mail" id="signMail"></label>
 				<label>Password <a href="#">forgot password</a><input type="text" class="sign-password"></label>
 				<button class="sign-button">LOGIN</button>
 				<a href="#"><p>I don't have an account</p></a>
@@ -52,19 +52,10 @@
 								<li>LIBRARY</li>
 								<li>CONTACT US</li>
 								<li class="selector">EN
-									<div class="selector-service">
-										<ul>
-											<li>UKR</li>
-											<li>RO</li>
-											<li>IT</li>
-											<li>RUS</li>
-										</ul>
-									</div>
+									
 								</li>
 								<li class="selector">US
-									<div class="selector-service">
-										
-									</div>
+									
 								</li>
 							</ul>
 						</nav>
@@ -201,9 +192,9 @@
 						<div class="control">
 							<h1>Control and manage any device with cloud solutions</h1>
 							<p>Improve business performance and the user experience with the user experience with the right mix Iot technology and processes</p>
-							<div class="control-button">
+							<a href="#"><div class="control-button">
 								VIEW MORE
-							</div>
+							</div></a>
 						</div>
 					</div>
 				</div>
@@ -215,10 +206,12 @@
 						</div>
 						<h5>Follow us on Facebook</h5>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit</p>
-						<div class="button-sales">
-							<i class="fab fa-facebook-f"></i>&nbsp;
-							FOLLOW
-						</div>
+						<a href="https://www.facebook.com/" target="_blank">
+							<div class="button-sales">
+								<i class="fab fa-facebook-f"></i>&nbsp;
+								FOLLOW
+							</div>
+						</a>
 					</div>
 					
 				</div>
@@ -237,7 +230,7 @@
 						</div>
 						
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="item">
 							<img src="app/pictures/item1.png" alt="mobile_screen" class="item-image">
 							<div class="item-text">
@@ -248,7 +241,7 @@
 							
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="item">
 							<img src="app/pictures/item2.png" alt="mobile_screen" class="item-image">
 							<div class="item-text">
@@ -259,7 +252,7 @@
 							
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="item">
 							<img src="app/pictures/item3.png" alt="mobile_screen" class="item-image">
 							<div class="item-text">
@@ -270,7 +263,7 @@
 							
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="item">
 							<img src="app/pictures/item4.png" alt="mobile_screen" class="item-image">
 							<div class="item-text">
@@ -281,7 +274,7 @@
 							
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="item">
 							<img src="app/pictures/item5.png" alt="mobile_screen" class="item-image">
 							<div class="item-text">
@@ -292,7 +285,7 @@
 							
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="item">
 							<img src="app/pictures/item6.png" alt="mobile_screen" class="item-image">
 							<div class="item-text">
@@ -303,7 +296,7 @@
 							
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="item">
 							<img src="app/pictures/item7.png" alt="mobile_screen" class="item-image">
 							<div class="item-text">
@@ -314,7 +307,7 @@
 							
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-sm-6">
 						<div class="item">
 							<img src="app/pictures/item1.png" alt="mobile_screen" class="item-image">
 							<div class="item-text">
@@ -329,11 +322,104 @@
 					
 				</div>
 				<div class="row load">
-					<div class="col-lg-3 mx-auto">
+					<div class="col-lg-3 col-sm-6 mx-auto">
 						<div class="button">
-							LOAD MORE
+							LOAD MORE <span>&#8635;</span>
 						</div>
 					</div>
+				</div>
+				<div class="row additional unvisible">
+					<div class="col-lg-3 col-sm-6">
+						<div class="item">
+							<img src="app/pictures/item1.png" alt="mobile_screen" class="item-image">
+							<div class="item-text">
+								<p>$ 799.55</p>
+								<h6>Kristina Dam Oak Table With White Marble Top</h6>
+								
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="item">
+							<img src="app/pictures/item2.png" alt="mobile_screen" class="item-image">
+							<div class="item-text">
+								<p>$ 799.55</p>
+								<h6>Hay - About A Lounge  Chair AAL 93</h6>
+					
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="item">
+							<img src="app/pictures/item3.png" alt="mobile_screen" class="item-image">
+							<div class="item-text">
+								<p>$ 799.55</p>
+								<h6>Activate Facial Mask and Charcoal Soap </h6>
+								
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="item">
+							<img src="app/pictures/item4.png" alt="mobile_screen" class="item-image">
+							<div class="item-text">
+								<p>$ 799.55</p>
+								<h6>Cocktail Table Walnut  | YES</h6>
+								
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="item">
+							<img src="app/pictures/item5.png" alt="mobile_screen" class="item-image">
+							<div class="item-text">
+								<p>$ 799.55</p>
+								<h6>Hay - About A Lounge  Chair AAL 93</h6>
+								
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="item">
+							<img src="app/pictures/item6.png" alt="mobile_screen" class="item-image">
+							<div class="item-text">
+								<p>$ 799.55</p>
+								<h6>TORY DESK CALENDAR</h6>
+								
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="item">
+							<img src="app/pictures/item7.png" alt="mobile_screen" class="item-image">
+							<div class="item-text">
+								<p>$ 799.55</p>
+								<h6>CH445 Wing Chair on  SUITE NY</h6>
+								
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="item">
+							<img src="app/pictures/item1.png" alt="mobile_screen" class="item-image">
+							<div class="item-text">
+								<p>$ 799.55</p>
+								<h6>Kristina Dam Oak Table With White Marble Top</h6>
+								
+							</div>
+							
+						</div>
+					</div>
+					
+					
+				</div>
 				</div>
 			</div>
 		</div>
@@ -447,14 +533,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3">
-					<p>	&#9400 Copyright 2019 <br>
-					All rights reserved</p>
+					<p id="generated"></p>
 					<address>
 						<h6>CONTACT</h6>
 						<p>Headquarters: <br>		
 						   5600, Blvd. des Galeries, Bur 530 Québec, Québec</p>
 						<p><a href="mailto:contact@osf-global.com">contact@osf-global.com</a></p>
-						<p>+1 (888) 548-4344</p>
+						<a href="tel:+18885484344"><p>+1 (888) 548-4344</p></a>
 					</address>
 					
 				</div>
@@ -507,10 +592,10 @@
 				</div>
 				<div class="col-lg-2">
 					<div class="social">
-						<i class="fab fa-facebook-f"></i>
-						<i class="fab fa-google-plus-g"></i>
-						<i class="fab fa-twitter"></i>
-						<i class="fab fa-pinterest"></i>
+						<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://accounts.google.com/signin" target="_blank"><i class="fab fa-google-plus-g"></i></a>
+						<a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+						<a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
 					</div>
 				</div>
 			</div>

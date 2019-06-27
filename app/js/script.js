@@ -23,6 +23,12 @@ $(document).ready(function(){
   });
 
 
+	/*Current year*/
+	var date = new Date();
+	var year = date.getFullYear(); 
+	console.log(year);
+	document.getElementById('generated').innerHTML += '&#9400 Copyright ' + year + '<br>' + 'All rights reserved';
+	
 
 
 	/*Navbar hover effect*/
@@ -30,8 +36,11 @@ $(document).ready(function(){
 
 	$('.product-carousel').slick({
 	    slidesToShow: 4, 
+	    autoplay:true,
+	    autoplaySpeed: 5000,
 	    prevArrow: "<div class='prevArrow'></div>",
 	    nextArrow: "<div class='nextArrow'></div>",
+	    slidesToScroll: 4,
 	  });
 	$('.drop').hover(
 			function(){
@@ -59,15 +68,21 @@ $(document).ready(function(){
 		)
 
 	/*Hover effect on products*/
-	$('.item-image').hover(
+	$('.item-text').hover(function(event){
+
+			console.log(event);
+			event.preventDefault();
+	})
+	$('.item').hover(
+		
 		
 
 
-		function(){
-			console.log(this.parentNode);
+		function(event){
+			
 			var selected = document.createElement('div');
 			selected.className = 'item-selected';
-			this.parentNode.append(selected);
+			this.append(selected);
 			var selectedHeart = document.createElement('div');
 			selectedHeart.className = 'selected-heart';
 			selected.appendChild(selectedHeart);
@@ -82,12 +97,17 @@ $(document).ready(function(){
 			selectedPlus.appendChild(plus);
 		
 		},
-		function(){
+		function(event){
 			
 			$('.item-selected').remove();
 		}
 
 	)
+	
+	$('.button').click(function(){
+    	$('.load').addClass('unvisible');
+    	$('.additional').removeClass('unvisible');
+    });
 
 });
 
@@ -132,6 +152,13 @@ $(document).ready(function(){
     if (e.keyCode == 27 & !$('.sign').hasClass('unvisible')) {
         $('.sign').addClass('unvisible');
     }
+
+    /*Button load more*/
+    
+
+
+
+
 });
 
 

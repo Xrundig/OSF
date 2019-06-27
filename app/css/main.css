@@ -45,7 +45,11 @@ header {
       header .navbar ul li {
         color: #45413e;
         display: inline-block;
-        margin-left: 10px; }
+        margin-left: 10px;
+        user-select: none;
+        cursor: pointer; }
+        header .navbar ul li:hover {
+          color: #ccc; }
 
 p {
   font-family: Lato-Regular; }
@@ -53,8 +57,8 @@ p {
 a {
   color: inherit;
   text-decoration: none; }
-  a a:hover {
-    text-decoration: overline; }
+  a:hover {
+    text-decoration: none; }
 
 .sign {
   width: 100%;
@@ -162,9 +166,7 @@ a {
 .drop {
   height: 100%;
   position: relative;
-  z-index: 2;
-  /*&:hover
-		color: white*/ }
+  z-index: 2; }
 
 .drop-service {
   position: absolute;
@@ -184,27 +186,6 @@ a {
   height: 100%;
   position: relative;
   z-index: 2; }
-  .selector:hover {
-    color: white; }
-  .selector:hover .selector-service {
-    display: block; }
-  .selector .selector-service {
-    position: absolute;
-    top: -50px;
-    height: 300px;
-    width: 45px;
-    background-color: #262a32;
-    z-index: -1;
-    display: none; }
-    .selector .selector-service ul {
-      display: block;
-      list-style-type: none;
-      z-index: 5;
-      width: 100%; }
-      .selector .selector-service ul li {
-        display: block;
-        color: green;
-        margin-left: 0px; }
 
 .selector:after {
   content: "▼";
@@ -273,6 +254,9 @@ a {
   align-items: center;
   justify-content: center;
   cursor: pointer; }
+  .control-button:hover {
+    background-color: white;
+    color: black; }
 
 .slick-dots {
   bottom: 10%; }
@@ -299,9 +283,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  background-image: url(../pictures/palm.svg);
+  background-repeat: no-repeat;
+  background-position: 0% 130%;
+  background-size: 80%;
+  border-radius: 5px; }
   .summer-sales h2 {
-    font-size: 68px; }
+    font-size: 76px; }
   .summer-sales h3 {
     font-family: Lato-Regular;
     text-align: center; }
@@ -340,7 +329,6 @@ a {
 
 .item {
   box-sizing: border-box;
-  /*height: 300px */
   margin: 20px 0px;
   font-family: Lato-Regular;
   text-align: center;
@@ -418,7 +406,8 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-direction: column-reverse; }
+  flex-direction: column-reverse;
+  pointer-events: none; }
 
 .item-image {
   width: 100%; }
@@ -434,8 +423,18 @@ a {
   border: 2px solid white;
   border-radius: 25px;
   text-align: center;
-  line-height: 50px;
+  line-height: 45px;
   box-sizing: border-box; }
+  .button:hover {
+    background-color: white;
+    color: #262A32;
+    cursor: pointer; }
+  .button span {
+    font-size: 20px;
+    padding-left: 10px; }
+
+.additional {
+  padding-bottom: 70px; }
 
 .banner {
   width: 100%;
@@ -567,6 +566,9 @@ address p {
   font-size: 20px;
   display: flex;
   justify-content: space-around; }
+  .social a:hover {
+    color: inherit;
+    opacity: 0.75; }
 
 .visible {
   display: block;
@@ -584,9 +586,6 @@ address p {
   /**/ }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width: 992px) {
-  /**/ }
-
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   /**/ }

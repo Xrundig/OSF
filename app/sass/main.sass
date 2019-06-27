@@ -30,13 +30,17 @@ header
 				color: #45413e
 				display: inline-block
 				margin-left: 10px
+				user-select: none
+				cursor: pointer
+				&:hover
+					color: #ccc
 p 
 	font-family: Lato-Regular
 a 
 	color: inherit
 	text-decoration: none
-	a:hover
-		text-decoration: overline
+	&:hover
+		text-decoration: none
 
 .sign
 	width: 100%
@@ -149,8 +153,7 @@ a
 	height: 100%
 	position: relative
 	z-index: 2
-	/*&:hover
-		color: white*/
+	
 	
 		
 
@@ -173,28 +176,7 @@ a
 	height: 100%
 	position: relative
 	z-index: 2
-	&:hover
-		color: white
-	&:hover	.selector-service
-		display: block
-	.selector-service
-		position: absolute
-		top: -50px
-		height: 300px
-		width: 45px
-		background-color: #262a32
-		z-index: -1
-		display: none
-		ul
-			display: block
-			list-style-type: none
-			z-index: 5
-			width: 100%
-			li
-				display: block
-				color: green
-				margin-left: 0px		
-				
+	
 
 
 .selector:after
@@ -265,6 +247,9 @@ a
 	align-items: center
 	justify-content: center
 	cursor: pointer
+	&:hover
+		background-color: white
+		color: black
 
 .slick-dots
 	bottom: 10%
@@ -285,6 +270,8 @@ a
 	text-align: center
 	box-sizing: border-box
 	position: relative
+
+
 	h5, p 
 		font-family: Lato-Regular
 	h5 
@@ -300,8 +287,15 @@ a
 	align-items: center
 	justify-content: center
 	flex-wrap: wrap
+	background-image: url(../pictures/palm.svg)
+	background-repeat: no-repeat
+	background-position: 0% 130%
+	background-size: 80%
+	border-radius: 5px
+
+
 	h2
-		font-size: 68px
+		font-size: 76px
 	h3
 		font-family: Lato-Regular
 		text-align: center
@@ -340,7 +334,6 @@ a
 		
 .item
 	box-sizing: border-box
-	/*height: 300px
 	margin: 20px 0px
 	font-family: Lato-Regular
 	text-align: center
@@ -426,6 +419,7 @@ a
 	align-items: center
 	flex-wrap: wrap
 	flex-direction: column-reverse
+	pointer-events: none
 
 
 
@@ -444,8 +438,18 @@ a
 	border: 2px solid white
 	border-radius: 25px
 	text-align: center
-	line-height: $button-height
+	line-height: 45px
 	box-sizing: border-box
+	&:hover
+		background-color: white
+		color: #262A32
+		cursor: pointer
+	span 
+		font-size: 20px
+		padding-left: 10px
+
+.additional
+	padding-bottom: 70px
 
 .banner
 	width: 100%
@@ -575,6 +579,9 @@ address
 	font-size: 20px
 	display: flex
 	justify-content: space-around
+	a:hover
+		color: inherit
+		opacity: 0.75
 
 
 
