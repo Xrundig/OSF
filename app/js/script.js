@@ -41,6 +41,31 @@ $(document).ready(function(){
 	    prevArrow: "<div class='prevArrow'></div>",
 	    nextArrow: "<div class='nextArrow'></div>",
 	    slidesToScroll: 4,
+	    responsive: [
+	    	{
+	    		breakpoint: 992,
+	    		settings: {
+	    			slidesToShow: 3,
+	    			slidesToScroll: 3,
+	    		}
+	    	},
+	    	{	
+	    		breakpoint: 768,
+	    		settings: {
+	    			slidesToShow: 2,
+	    			slidesToScroll: 2,
+	    		}
+	    	},
+	    	{	
+	    		breakpoint: 578,
+	    		settings: {
+	    			slidesToShow: 1,
+	    			slidesToScroll: 1,
+	    			arrows: false,
+	    		}
+	    		
+	    	}
+	    ]
 	  });
 	$('.drop').hover(
 			function(){
@@ -109,6 +134,16 @@ $(document).ready(function(){
     	$('.additional').removeClass('unvisible');
     });
 
+    function checkPosition() {
+    if($(window).width() < 767) {
+    	console.log('hi');
+        $('.special').addClass('unvisible');
+    } else {
+        $('.special').removeClass('unvisible');
+    }
+}
+
+
 });
 
 
@@ -152,11 +187,6 @@ $(document).ready(function(){
     if (e.keyCode == 27 & !$('.sign').hasClass('unvisible')) {
         $('.sign').addClass('unvisible');
     }
-
-    /*Button load more*/
-    
-
-
 
 
 });
